@@ -1,4 +1,4 @@
 CardCards
 =========
 
-Standford CS139p
+Stanford CS139p
