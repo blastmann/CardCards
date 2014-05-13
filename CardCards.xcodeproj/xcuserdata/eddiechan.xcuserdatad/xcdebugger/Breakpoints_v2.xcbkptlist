@@ -42,13 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardCards/CardGameViewController.m"
-            timestampString = "421579703.458107"
+            timestampString = "421689739.079464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-touchCardButton:"
-            landmarkType = "5">
+            startingLineNumber = "83"
+            endingLineNumber = "83">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,11 +56,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardCards/CardGameViewController.m"
-            timestampString = "421579703.458107"
+            timestampString = "421689739.079464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61">
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-titleForCard:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -72,43 +72,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardCards/CardGameViewController.m"
-            timestampString = "421579619.915065"
+            timestampString = "421689790.175367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "flipCount"
-            landmarkType = "19">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[CardGameViewController flipCount]"
-                  moduleName = "CardCards"
-                  urlString = "file:///Users/eddiechan/Documents/ObjCProjects/CardCards/CardCards/CardGameViewController.m"
-                  timestampString = "421579703.75493"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[CardGameViewController setFlipCount:]"
-                  moduleName = "CardCards"
-                  urlString = "file:///Users/eddiechan/Documents/ObjCProjects/CardCards/CardCards/CardGameViewController.m"
-                  timestampString = "421579703.755345"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-touchCardButton:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

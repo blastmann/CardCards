@@ -27,6 +27,21 @@
     return @[@"♠︎",@"♣︎",@"♥︎",@"♦︎"];
 }
 
+- (int)match:(NSArray *)otherCards
+{
+    int score = 0;
+    if ([otherCards count] == 1) {
+        PlayingCard *card = [otherCards firstObject];
+        if (card.rank == self.rank) {
+            score = 4;
+        } else if ([card.suit isEqualToString:self.suit]) {
+            score = 1;
+        }
+    }
+    
+    return score;
+}
+
 - (void)setSuit:(NSString *)suit
 {
     if([[PlayingCard validSuits] containsObject:suit])

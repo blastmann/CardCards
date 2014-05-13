@@ -49,7 +49,7 @@
 
 - (int) countOfCards
 {
-    NSLog(@"card count: %lu", [self.cards count]);
+    NSLog(@"card count: %lu", (unsigned long)[self.cards count]);
     return [self.cards count];
 }
 

@@ -8,20 +8,30 @@
 
 #import "CardGameViewController.h"
 #import "PlayingCardDeck.h"
+#import "CardMatchingGame.h"
 
 @interface CardGameViewController ()
 
-@property (nonatomic) int flipCount;
-@property (nonatomic) PlayingCardDeck *cardDeck;
+@property (strong, nonatomic) CardMatchingGame *game;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
 
 @implementation CardGameViewController
 
--(PlayingCardDeck *) cardDeck
+- (CardMatchingGame *) game
 {
-    if(!_cardDeck) _cardDeck = [[PlayingCardDeck alloc] init];
-    return _cardDeck;
+    if (!_game) {
+        _game = [[CardMatchingGame alloc] initWithCardCount:0 usingDeck:[self createDeck]];
+    }
+    
+    return _game;
+}
+
+- (Deck *)createDeck
+{
+    return [[PlayingCardDeck alloc] init];
 }
 
 - (void)viewDidLoad
@@ -38,19 +48,31 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender
 {
-    UIColor *newColor = nil;
-    if ([sender.currentTitle length]) {
-        newColor = [UIColor colorWithWhite:0.3f alpha:1.0f];
-        [sender setTitle:@"" forState:UIControlStateNormal];
-        [sender setBackgroundColor:newColor];
-    } else {
-        if([self.cardDeck countOfCards])
-        {
-            newColor = [UIColor whiteColor];
-            [sender setTitle:[[self.cardDeck drawRandomCard] contents] forState:UIControlStateNormal];
-            [sender setBackgroundColor:newColor];
-        }
+    int chosenIndex = [self.cardButtons indexOfObject:sender];
+    [self.game chooseCardAtIndex:chosenIndex];
+    [self updateUI];
+}
+
+- (void)updateUI
+{
+    for (UIButton *cardButton in self.cardButtons) {
+        int cardButtonIndex = [self.cardButtons indexOfObject:cardButton];
+        Card *card = [self.game cardAtIndex:cardButtonIndex];
+        [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [cardButton setBackgroundColor:[self backgroundForCard:card]];
+        cardButton.enabled = !card.isMatched;
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
     }
+}
+
+- (NSString *) titleForCard:(Card *)card
+{
+    return card.isChosen ? card.contents : @"";
+}
+
+- (UIColor *) backgroundForCard:(Card *)card
+{
+    return card.isChosen ? [UIColor whiteColor] : [UIColor colorWithWhite:0.3f alpha:1.0f];
 }
 
 @end
