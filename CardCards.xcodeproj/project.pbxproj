@@ -111,8 +111,8 @@
 				E4F87541192119000044B80F /* CardMatchingGame.m */,
 			);
 			name = Model;
-			path = /Users/eddiechan/Documents/ObjCProjects/CardCards/CardCards/Model;
-			sourceTree = "<absolute>";
+			path = CardCards/Model;
+			sourceTree = SOURCE_ROOT;
 		};
 		E4EF15FC191A909500F24923 = {
 			isa = PBXGroup;
