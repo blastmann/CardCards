@@ -256,6 +256,17 @@
                     <connections>
                         <outlet property="scoreLabel" destination="ZyN-Ul-Xba" id="tAL-hn-Z7G"/>
                         <outletCollection property="cardButtons" destination="YVT-Uj-crl" id="R8s-46-w8c"/>
+                        <outletCollection property="cardButtons" destination="1vw-Es-Wb5" id="KRh-tj-t5U"/>
+                        <outletCollection property="cardButtons" destination="4vy-uv-n0N" id="KzY-uU-Joj"/>
+                        <outletCollection property="cardButtons" destination="emM-Fk-I5n" id="0pf-Jb-E8g"/>
+                        <outletCollection property="cardButtons" destination="EtW-by-UCI" id="Abw-zC-568"/>
+                        <outletCollection property="cardButtons" destination="Fc8-Ao-00J" id="Ugs-Xh-8PM"/>
+                        <outletCollection property="cardButtons" destination="iOi-BN-cSR" id="fiD-iL-dUG"/>
+                        <outletCollection property="cardButtons" destination="mF3-2c-fuO" id="Xgc-ah-b1g"/>
+                        <outletCollection property="cardButtons" destination="Xlc-aQ-57I" id="ngV-dN-9Un"/>
+                        <outletCollection property="cardButtons" destination="9MM-4K-cB7" id="vll-Cc-6z6"/>
+                        <outletCollection property="cardButtons" destination="05S-KD-tWn" id="1wo-og-Ioj"/>
+                        <outletCollection property="cardButtons" destination="ImM-VH-XpU" id="Kcu-Q0-8x7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
